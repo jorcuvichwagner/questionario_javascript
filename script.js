@@ -1,37 +1,49 @@
-function botaozinho_resposta() {
-    var respostaUsuario1 = document.querySelector('input[name="resposta"]:checked');
-    var respostaUsuario2 = document.querySelector('input[name="resposta2"]:checked');
-    var respostaUsuario3 = document.querySelector('input[name="resposta3"]:checked');
-    var respostaUsuario4 = document.querySelector('input[name="resposta4"]:checked');
+function resposta_questionario() {
 
+    var resposta1 = document.querySelector('input[name="resposta1"]:checked');
+    var resposta2 = document.querySelector('input[name="resposta2"]:checked');
+    var resposta3 = document.querySelector('input[name="resposta3"]:checked');
+    var resposta4 = document.querySelector('input[name="resposta4"]:checked');
 
-    if(respostaUsuario1 && respostaUsuario2 && respostaUsuario3 && respostaUsuario4){
-        if(respostaUsuario1.value === "correto"){
-            document.getElementById("resultado_1").innerHTML = "acertou";
+    if(resposta1 && resposta2 && resposta3 && resposta4){
+        if(resposta1.value === "correta"){
+            document.getElementById("correta1").innerHTML = "questão correta";
         }
         else{
-            document.getElementById("resultado_1").innerHTML = "ERROU!!!";
+            document.getElementById("errada1").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
         }
-        if(respostaUsuario2.value === "correto"){
-            document.getElementById("resultado_2").innerHTML = "acertou";
-        }
-        else{
-            document.getElementById("resultado_2").innerHTML = "ERROU!!!";
-        }
-        if(respostaUsuario3.value === "correto"){
-            document.getElementById("resultado_3").innerHTML = "acertou";
+        if(resposta2.value === "correta"){
+            document.getElementById("correta2").innerHTML = "questão correta";
         }
         else{
-            document.getElementById("resultado_3").innerHTML = "ERROU!!!";
+            document.getElementById("errada2").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
         }
-        if(respostaUsuario4.value === "correto"){
-            document.getElementById("resultado_4").innerHTML = "acertou";
+        if(resposta3.value === "correta"){
+            document.getElementById("correta3").innerHTML = "questão correta";
         }
         else{
-            document.getElementById("resultado_4").innerHTML = "ERROU!!!";
+            document.getElementById("errada3").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
+        }
+        if(resposta4.value === "correta"){
+            document.getElementById("correta4").innerHTML = "questão correta";
+        }
+        else{
+            document.getElementById("errada4").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
         }
     }
     else{
-        alert("Não deixar questões em aberto!");
+        alert("não deixe questões em branco!");
+    }
+
+}
+
+function ola_usuario(){
+    var nome_usu = prompt("Escreva seu nome:");
+    if(nome_usu){
+        document.getElementById("nome_usuario").innerHTML = nome_usu;
+    }
+    else{
+        alert("escreva seu nome");
+        ola_usuario();
     }
 }
