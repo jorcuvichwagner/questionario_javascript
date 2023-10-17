@@ -1,49 +1,61 @@
-function resposta_questionario() {
-
-    var resposta1 = document.querySelector('input[name="resposta1"]:checked');
-    var resposta2 = document.querySelector('input[name="resposta2"]:checked');
-    var resposta3 = document.querySelector('input[name="resposta3"]:checked');
-    var resposta4 = document.querySelector('input[name="resposta4"]:checked');
-
-    if(resposta1 && resposta2 && resposta3 && resposta4){
-        if(resposta1.value === "correta"){
-            document.getElementById("correta1").innerHTML = "questão correta";
-        }
-        else{
-            document.getElementById("errada1").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
-        }
-        if(resposta2.value === "correta"){
-            document.getElementById("correta2").innerHTML = "questão correta";
-        }
-        else{
-            document.getElementById("errada2").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
-        }
-        if(resposta3.value === "correta"){
-            document.getElementById("correta3").innerHTML = "questão correta";
-        }
-        else{
-            document.getElementById("errada3").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
-        }
-        if(resposta4.value === "correta"){
-            document.getElementById("correta4").innerHTML = "questão correta";
-        }
-        else{
-            document.getElementById("errada4").innerHTML = "Resposta errada, pois a soma dos quadrados dos catetos é igual ao quadrado da hiponeunsa";
-        }
+function inclui_nome() {
+    var nome_variavel = prompt("Coloque seu nome:");
+    if(nome_variavel){
+        document.getElementById("marcacao_nome").innerHTML = nome_variavel;
     }
     else{
-        alert("não deixe questões em branco!");
+        alert("Nome não atribuido, preencha o nome.");
+        inclui_nome();
     }
-
 }
 
-function ola_usuario(){
-    var nome_usu = prompt("Escreva seu nome:");
-    if(nome_usu){
-        document.getElementById("nome_usuario").innerHTML = nome_usu;
+function funcao_resposta(){
+
+    var resp1 = document.querySelector('input[name="quest_1"]:checked');
+    var resp2 = document.querySelector('input[name="quest_2"]:checked');
+    var resp3 = document.querySelector('input[name="quest_3"]:checked');
+    var resp4 = document.querySelector('input[name="quest_4"]:checked');
+
+    var contador = 0;
+
+
+    if(resp1 && resp2 && resp3 && resp4){
+        if(resp1.value == "correta"){
+            document.getElementById("resp_correta_1").innerHTML = "Correta!"
+            contador = contador + 1;
+        }
+        else{
+            document.getElementById("resp_errada_1").innerHTML = "Errada, pois a soma dos quadrados dos catetos é igual ao quadrada da hipotenusa!"
+
+        }
+        if(resp2.value == "correta"){
+            document.getElementById("resp_correta_2").innerHTML = "Correta!"
+            contador = contador + 1;
+        }
+        else{
+            document.getElementById("resp_errada_2").innerHTML = "Errada, pois a soma dos quadrados dos catetos é igual ao quadrada da hipotenusa!"
+
+        }
+        if(resp3.value == "correta"){
+            document.getElementById("resp_correta_3").innerHTML = "Correta!"
+            contador = contador + 1;
+        }
+        else{
+            document.getElementById("resp_errada_3").innerHTML = "Errada, pois a soma dos quadrados dos catetos é igual ao quadrada da hipotenusa!"
+
+        }
+        if(resp4.value == "correta"){
+            document.getElementById("resp_correta_4").innerHTML = "Correta!"
+            contador = contador + 1;
+        }
+        else{
+            document.getElementById("resp_errada_4").innerHTML = "Errada, pois a soma dos quadrados dos catetos é igual ao quadrada da hipotenusa!"
+
+        }
+        document.getElementById("quantos_acertos").innerHTML = "Você acertou " + contador + " questões!";
     }
     else{
-        alert("escreva seu nome");
-        ola_usuario();
+        alert("não deixe questões em branco!")
     }
+
 }

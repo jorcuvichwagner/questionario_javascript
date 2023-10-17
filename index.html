@@ -3,40 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-<body onload="ola_usuario()">
-    <p id="nome_usuario"></p>
+<body onload="inclui_nome()">
+
+    <script src="script.js"></script>
+
+    <p id="marcacao_nome"></p>
+
     <form>
-        <h3>Qual é a questão?</h3>
-        <input type="radio" name="resposta1" value="correta">resosta 1 <br>
-        <input type="radio" name="resposta1" value="errada">resosta 2 <br>
-        <input type="radio" name="resposta1" value="errada">resosta 3 <br>
-        <p id="correta1" class="correta"></p><p id="errada1" class="errada"></p><br>
+        <h3>Questão 1</h3>
+        <input type="radio" name="quest_1" value="correta">Resposta 1 <br>
+        <input type="radio" name="quest_1" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_1" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_1" value="errada">Resposta 1 <br>
+        <p id="resp_correta_1" class="verde"></p><p id="resp_errada_1" class="vermelho"></p><br>
 
-        <h3>Qual é a questão?</h3>
-        <input type="radio" name="resposta2" value="correta">resosta 1 <br>
-        <input type="radio" name="resposta2" value="errada">resosta 2 <br>
-        <input type="radio" name="resposta2" value="errada">resosta 3 <br>
-        <p id="correta2" class="correta"></p><p id="errada2" class="errada"></p><br>
+        <h3>Questão 2</h3>
+        <input type="radio" name="quest_2" value="correta">Resposta 1 <br>
+        <input type="radio" name="quest_2" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_2" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_2" value="errada">Resposta 1 <br>
+        <p id="resp_correta_2" class="verde"></p><p id="resp_errada_2" class="vermelho"></p>
 
-        <h3>Qual é a questão?</h3>
-        <input type="radio" name="resposta3" value="errada">resosta 1 <br>
-        <input type="radio" name="resposta3" value="errada">resosta 2 <br>
-        <input type="radio" name="resposta3" value="correta">resosta 3 <br>
-        <p id="correta3" class="correta"></p><p id="errada3" class="errada"></p><br>
+        <h3>Questão 3</h3>
+        <input type="radio" name="quest_3" value="correta">Resposta 1 <br>
+        <input type="radio" name="quest_3" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_3" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_3" value="errada">Resposta 1 <br>
+        <p id="resp_correta_3" class="verde"></p><p id="resp_errada_3" class="vermelho"></p><br>
 
-        <h3>Qual é a questão?</h3>
-        <input type="radio" name="resposta4" value="errada">resosta 1 <br>
-        <input type="radio" name="resposta4" value="correta">resosta 2 <br>
-        <input type="radio" name="resposta4" value="errada">resosta 3 <br>
-        <p id="correta4" class="correta"></p><p id="errada4" class="errada"></p><br>
+        <h3>Questão 4</h3>
+        <input type="radio" name="quest_4" value="correta">Resposta 1 <br>
+        <input type="radio" name="quest_4" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_4" value="errada">Resposta 1 <br>
+        <input type="radio" name="quest_4" value="errada">Resposta 1 <br>
+        <p id="resp_correta_4" class="verde"></p><p id="resp_errada_4" class="vermelho"></p>
 
-
-
-        <button type="button" onclick="resposta_questionario()">Responder</button>
-        <script src="script.js"></script>
+        <p id="quantos_acertos"></p>
+            <button type="button" onclick="funcao_resposta()">Responder</button>
     </form>
+    
 </body>
 </html>
